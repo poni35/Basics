@@ -1,0 +1,56 @@
+# Your code below:
+
+#list detailing offered pizza types
+toppings = ["pepperoni", "pineapple", "cheese", "sausage", "olives", "anchovies", "mushrooms"]
+
+#list respectively detailing prices of aforementioned pizzas
+prices = [2, 6, 1, 3, 2, 7, 2]
+
+#counts the number of pizzas costing 2 dollars and then displays on console
+num_two_dollar_slices = prices.count(2)
+print("No. of $2 Pizzas Available:", num_two_dollar_slices)
+
+#provides length of topppings list - i.e. number of items it contains
+num_pizzas = len(toppings)
+
+print("We sell", num_pizzas, "different kinds of pizza!")
+
+#2D list combining info from toppings & prices lists
+pizza_and_prices = [[2, "pepperoni"], [6, "pineapple"], [1, "cheese"], [3, "sausage"], [2, "olives"], [7, "anchovies"], [2, "mushrooms"]]
+
+#sorts so pizzas are in order of increasing price
+pizza_and_prices.sort()
+print("Pizza and Prices:", pizza_and_prices)
+
+#NOTE - IF A LIST HAS BEEN REORDERED, POP WILL USE INDEX FOR NEW LIST 
+
+#stores cheapest pizza in variable and then prints to console
+cheapest_pizza = pizza_and_prices[0]
+print("Cheapest Pizza:", cheapest_pizza)
+
+#stores most expensive pizza in variable and then prints to console
+priciest_pizza = pizza_and_prices[-1]
+print("Priciest Pizza:", priciest_pizza)
+
+#removing most expensive pizza as it was purchased with conditional statement. When the number is removed, the string "anchovies" becomes the new 0 index
+if pizza_and_prices[-1].pop(0):
+  pizza_and_prices[-1].pop(0)
+
+#inserted new pizza to replace anchovies, placed relevant top current ascending order
+pizza_and_prices.insert(4, [2.5, "peppers"]
+)
+
+#slicing the list and storing three cheapest in a variable - slicing excludes last index number - 0, 1, 2 are stored
+three_cheapest = pizza_and_prices[0:3]
+
+print("Updated Pizza and Prices:", pizza_and_prices)
+
+
+print("Three Cheapest Pizzas:", three_cheapest)
+
+
+
+
+
+
+
